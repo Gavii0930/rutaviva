@@ -1,0 +1,589 @@
+/* ==========================================================================
+   HOJA DE ESTILOS - RUTA VIVA
+   Evaluación Segundo Momento
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES Y CONFIGURACIÓN INICIAL
+   -------------------------------------------------------------------------- */
+
+/* Importación de las tipografías corporativas */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=RL+Aqva:display=swap&display=swap');
+
+:root {
+    /* Paleta de colores especificada */
+    --color-principal: #021133;      /* Azul muy oscuro */
+    --color-secundario: #022f5f;     /* Azul oscuro corporativo */
+    --color-complementario: #0053a1; /* Azul vibrante */
+    --color-fondo: #ffffff;          /* Blanco */
+    --color-fondo-suave: #f4f7fa;    /* Gris muy claro para contrastes */
+    --color-texto: #1e293b;          /* Gris oscuro para texto principal */
+    --color-texto-mutado: #64748b;   /* Gris medio para descripciones */
+    
+    /* Tipografías corporativas indicadas */
+    --fuente-titulos: 'RL aqva', 'Arial Black', sans-serif;
+    --fuente-textos: 'Manrope', sans-serif;
+}
+
+/* Reset básico para normalizar márgenes y cajas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-textos);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* Estilo para imágenes fluidas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Títulos con tipografía corporativa */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-principal);
+}
+
+/* Estilos de títulos de sección reutilizables */
+.seccion-titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.seccion-titulo h2 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.seccion-titulo p {
+    color: var(--color-texto-mutado);
+    font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. ENCABEZADO Y NAVEGACIÓN (HEADER)
+   -------------------------------------------------------------------------- */
+.encabezado {
+    background-color: var(--color-principal);
+    padding: 18px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.encabezado-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Flexbox para organizar logo y menú */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex; /* Flexbox para colocar elementos de menú en horizontal */
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-complementario);
+}
+
+/* --------------------------------------------------------------------------
+   3. SECCIÓN HERO
+   -------------------------------------------------------------------------- */
+.hero {
+    background-color: var(--color-fondo-suave);
+    padding: 60px 20px;
+}
+
+.hero-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Flexbox 2 columnas */
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-texto {
+    flex: 1; /* Ocupa el 50% del espacio */
+}
+
+.etiqueta-negocio {
+    color: var(--color-complementario);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.hero-texto h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.eslogan {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.descripcion-hero {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: var(--color-texto-mutado);
+}
+
+.boton-principal {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: var(--color-complementario);
+}
+
+.hero-imagen {
+    flex: 1; /* Ocupa el 50% del espacio */
+}
+
+.hero-imagen img {
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   4. SECCIÓN NOSOTROS
+   -------------------------------------------------------------------------- */
+.nosotros {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-contenedor {
+    display: flex; /* Flexbox alineación horizontal */
+    gap: 40px;
+    align-items: center;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros-contenido {
+    flex: 1;
+}
+
+.nosotros-contenido h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    color: var(--color-secundario);
+    font-size: 1.25rem;
+}
+
+.nosotros-contenido p {
+    margin-bottom: 15px;
+    color: var(--color-texto-mutado);
+}
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN PRODUCTOS
+   -------------------------------------------------------------------------- */
+.productos {
+    background-color: var(--color-fondo-suave);
+    padding: 70px 20px;
+}
+
+.productos-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Flexbox para rejilla envuelta */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto-tarjeta {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* 3 tarjetas por fila */
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.producto-tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.producto-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.producto-info p {
+    color: var(--color-texto-mutado);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.boton-tarjeta {
+    background-color: var(--color-principal);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.boton-tarjeta:hover {
+    background-color: var(--color-complementario);
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN BENEFICIOS / SERVICIOS
+   -------------------------------------------------------------------------- */
+.beneficios {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.beneficios-contenedor {
+    display: flex; /* Flexbox para los 3 beneficios */
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.beneficio-tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.beneficio-tarjeta h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.beneficio-tarjeta p {
+    color: var(--color-texto-mutado);
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN TABLA
+   -------------------------------------------------------------------------- */
+.tabla-seccion {
+    background-color: var(--color-fondo-suave);
+    padding: 70px 20px;
+}
+
+.tabla-contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto; /* Para desplazamiento horizontal en móviles */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: var(--color-principal);
+    color: #ffffff;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECCIÓN GALERÍA
+   -------------------------------------------------------------------------- */
+.galeria {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-contenedor {
+    display: flex; /* Flexbox para organizar las 6 imágenes */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.galeria-contenedor img {
+    width: calc(33.333% - 14px); /* 3 columnas */
+    min-width: 260px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.galeria-contenedor img:hover {
+    opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECCIÓN FORMULARIO DE CONTACTO
+   -------------------------------------------------------------------------- */
+.contacto {
+    background-color: var(--color-fondo-suave);
+    padding: 70px 20px;
+}
+
+.contacto-contenedor {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: var(--color-principal);
+    font-size: 0.95rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-family: var(--fuente-textos);
+    font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--color-complementario);
+}
+
+.boton-enviar {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: var(--color-complementario);
+}
+
+/* --------------------------------------------------------------------------
+   10. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------------------- */
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.pie-pagina-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    display: flex; /* Flexbox para columnas del footer */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-columna h3, 
+.footer-columna h4 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer-eslogan {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.footer-columna p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.enlace-social {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.copyright {
+    background-color: #010a21;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   11. DISEÑO RESPONSIVE BÁSICO (PANTALLAS PEQUEÑAS)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Menú pasa a vertical */
+    .encabezado-contenedor {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Hero pasa de 2 columnas a 1 */
+    .hero-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Nosotros pasa a 1 columna */
+    .nosotros-contenedor {
+        flex-direction: column;
+    }
+
+    /* Tarjetas y galería a columna completa */
+    .producto-tarjeta,
+    .galeria-contenedor img {
+        width: 100%;
+    }
+
+    .beneficios-contenedor {
+        flex-direction: column;
+    }
+
+    /* Footer reorganizado */
+    .pie-pagina-contenedor {
+        flex-direction: column;
+    }
+}
